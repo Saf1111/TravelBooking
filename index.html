@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelGo - Travel Booking Website</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <h1>🌍 TravelGo</h1>
+
+        <nav>
+
+            <a href="#">Home</a>
+            <a href="#destinations">Destinations</a>
+            <a href="#about">About</a>
+            <a href="#booking">Booking</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#contact">Contact</a>
+
+        </nav>
+
+    </header>
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section class="hero">
+
+        <h2>Travel Around the World</h2>
+
+        <p>Book your next adventure with us.</p>
+
+        <button onclick="document.querySelector('#booking').scrollIntoView({behavior:'smooth'})">
+            Book Now
+        </button>
+
+    </section>
+
+    <!-- ================= DESTINATIONS ================= -->
+
+    <section id="destinations" class="destinations">
+
+        <h2>Popular Destinations</h2>
+
+        <div class="cards">
+
+            <!-- Maldives -->
+
+            <div class="card">
+
+                <img src="images/maldives.jpg" alt="Maldives">
+
+                <h3>Maldives</h3>
+
+                <p>⭐⭐⭐⭐⭐</p>
+
+                <p>4.9 Rating</p>
+
+                <p class="price">₹25,000</p>
+
+                <button onclick="bookTrip('Maldives')">
+                    Book Now
+                </button>
+
+            </div>
+
+            <!-- Goa -->
+
+            <div class="card">
+
+                <img src="images/goa.jpg" alt="Goa">
+
+                <h3>Goa</h3>
+
+                <p>⭐⭐⭐⭐⭐</p>
+
+                <p>4.8 Rating</p>
+
+                <p class="price">₹8,000</p>
+
+                <button onclick="bookTrip('Goa')">
+                    Book Now
+                </button>
+
+            </div>
+
+            <!-- Manali -->
+
+            <div class="card">
+
+                <img src="images/manali.jpg" alt="Manali">
+
+                <h3>Manali</h3>
+
+                <p>⭐⭐⭐⭐⭐</p>
+
+                <p>4.9 Rating</p>
+
+                <p class="price">₹12,000</p>
+
+                <button onclick="bookTrip('Manali')">
+                    Book Now
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= WHY CHOOSE US ================= -->
+
+    <section class="why">
+
+        <h2>Why Choose Us?</h2>
+
+        <div class="features">
+
+            <div class="feature">
+
+                <h3>💰 Best Price</h3>
+
+                <p>Affordable travel packages.</p>
+
+            </div>
+
+            <div class="feature">
+
+                <h3>🛡 Safe Travel</h3>
+
+                <p>Your safety is our priority.</p>
+
+            </div>
+
+            <div class="feature">
+
+                <h3>☎ 24/7 Support</h3>
+
+                <p>Always available to help you.</p>
+
+            </div>
+
+            <div class="feature">
+
+                <h3>🌍 Trusted</h3>
+
+                <p>5000+ Happy Customers.</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about" class="about">
+
+        <h2>About Us</h2>
+
+        <p>
+            TravelGo is a trusted travel booking company offering holiday packages,
+            hotel bookings, adventure trips, honeymoon tours and family vacations
+            at affordable prices.
+        </p>
+
+        <p>
+            Our mission is to make travel easy, safe and enjoyable for everyone.
+        </p>
+
+    </section>
+
+    <!-- ================= BOOKING ================= -->
+
+    <section id="booking" class="booking">
+
+        <h2>Book Your Trip</h2>
+
+        <form id="bookingForm">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Your Name"
+                required>
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Email Address"
+                required>
+
+            <input
+                type="tel"
+                id="phone"
+                placeholder="Phone Number"
+                required>
+
+            <select id="destination" required>
+
+                <option value="">Select Destination</option>
+
+                <option>Maldives</option>
+
+                <option>Goa</option>
+
+                <option>Manali</option>
+
+            </select>
+
+            <input
+                type="date"
+                id="travelDate"
+                required>
+
+            <button type="submit">
+
+                Confirm Booking
+
+            </button>
+
+        </form>
+
+    </section>
+
+    <!-- ================= REVIEWS ================= -->
+
+    <section id="reviews" class="reviews">
+
+        <h2>Customer Reviews</h2>
+
+        <div class="review">
+
+            <p>⭐⭐⭐⭐⭐</p>
+
+            <p>
+                "Amazing experience! Highly recommended."
+            </p>
+
+            <b>- Rahul</b>
+
+        </div>
+
+        <div class="review">
+
+            <p>⭐⭐⭐⭐⭐</p>
+
+            <p>
+                "Very easy booking process."
+            </p>
+
+            <b>- Priya</b>
+
+        </div>
+
+        <div class="review">
+
+            <p>⭐⭐⭐⭐⭐</p>
+
+            <p>
+                "Excellent customer support and affordable prices."
+            </p>
+
+            <b>- Arun</b>
+
+        </div>
+
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact" class="contact">
+
+        <h2>Contact Us</h2>
+
+        <p>📧 travelgo@email.com</p>
+
+        <p>📞 +91 9876543210</p>
+
+        <p>📍 Kochi, Kerala, India</p>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <h3>🌍 TravelGo</h3>
+
+        <p>Making Your Dream Vacation Come True.</p>
+
+        <p>📧 travelgo@email.com</p>
+
+        <p>📞 +91 9876543210</p>
+
+        <p>&copy; 2026 TravelGo. All Rights Reserved.</p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
