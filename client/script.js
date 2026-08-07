@@ -16,53 +16,55 @@ function bookTrip(destinationName) {
 }
 
 // Booking Form
-const bookingForm = document.getElementById("bookingForm");
-
-bookingForm.addEventListener("submit", function(event){
+bookingForm.addEventListener("submit", async function(event){
 
     event.preventDefault();
 
-    let name = document.getElementById("name").value;
+    const bookingData = {
 
-    let email = document.getElementById("email").value;
+        name: document.getElementById("name").value,
 
-    let phone = document.getElementById("phone").value;
+        email: document.getElementById("email").value,
 
-    let destination = document.getElementById("destination").value;
+        phone: document.getElementById("phone").value,
 
-    let travelDate = document.getElementById("travelDate").value;
+        destination: document.getElementById("destination").value,
 
-    // Validation
+        travelDate: document.getElementById("travelDate").value
 
-    if(name=="" || email=="" || phone=="" || destination=="" || travelDate=="")
-    {
-        alert("Please fill all fields.");
+    };
 
-        return;
+    try{
+
+        const response = await fetch("http://localhost:3000/booking",{
+
+            method:"POST",
+
+            headers:{
+                "Content-Type":"application/json"
+            },
+
+            body: JSON.stringify(bookingData)
+
+        });
+
+        const data = await response.json();
+
+        alert(data.message);
+
+        bookingForm.reset();
+
     }
 
-    alert(
+    catch(error){
 
-"🎉 Booking Successful!\n\n" +
+        console.log(error);
 
-"Name : " + name +
+        alert("Server Connection Failed");
 
-"\nEmail : " + email +
-
-"\nPhone : " + phone +
-
-"\nDestination : " + destination +
-
-"\nTravel Date : " + travelDate +
-
-"\n\nThank you for choosing TravelGo!"
-
-);
-
-bookingForm.reset();
+    }
 
 });
-
 // ===============================
 // Welcome Message
 // ===============================
