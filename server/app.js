@@ -7,11 +7,8 @@ const PORT = 3000;
 app.use(cors());
 app.use(express.json());
 
-app.get("/", (req, res) => {
-    res.send("🌍 Welcome to TravelGo Backend!");
-});
-
-app.post("/booking", (req, res) => {
+// API Route
+app.post("/api/booking", (req, res) => {
 
     console.log("========== NEW BOOKING ==========");
 
@@ -22,6 +19,13 @@ app.post("/booking", (req, res) => {
         message: "Booking Received Successfully!"
     });
 
+});
+
+// Health Check
+app.get("/api", (req, res) => {
+    res.json({
+        status: "TravelGo Backend Running"
+    });
 });
 
 app.listen(PORT, () => {
