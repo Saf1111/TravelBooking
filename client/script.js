@@ -36,7 +36,7 @@ bookingForm.addEventListener("submit", async function(event){
 
     try{
 
-        const response = await fetch("http://localhost:3000/booking",{
+        const response = await fetch("/api/booking",{
 
             method:"POST",
 
