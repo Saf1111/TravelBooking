@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: travelbooking-frontend
+  namespace: travelbooking
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: travelbooking-frontend
+  template:
+    metadata:
+      labels:
+        app: travelbooking-frontend
+    spec:
+      containers:
+        - name: frontend
+          image: travelbooking-frontend:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 80
