@@ -1,312 +1,232 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TravelGo - Travel Booking Website</title>
-
+    <meta name="description" content="Discover beautiful destinations and book unforgettable trips with TravelGo.">
+    <title>TravelGo | Explore More. Experience More.</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <!-- ================= HEADER ================= -->
-
+    <!-- NAVIGATION -->
     <header>
-
         <h1>🌍 TravelGo</h1>
 
-        <nav>
-
-            <a href="#">Home</a>
+        <nav aria-label="Main navigation">
+            <a href="#home">Home</a>
             <a href="#destinations">Destinations</a>
             <a href="#about">About</a>
             <a href="#booking">Booking</a>
             <a href="#reviews">Reviews</a>
             <a href="#contact">Contact</a>
-
+            <a href="login.html">Login</a>
         </nav>
-
     </header>
 
-    <!-- ================= HERO SECTION ================= -->
+    <!-- HERO -->
+    <section id="home" class="hero">
+        <h2>Discover the World.<br>Live the Adventure.</h2>
 
-    <section class="hero">
+        <p>
+            From tropical escapes to mountain adventures,
+            your next unforgettable journey starts here.
+        </p>
 
-        <h2>Travel Around the World</h2>
-
-        <p>Book your next adventure with us.</p>
-
-        <button onclick="document.querySelector('#booking').scrollIntoView({behavior:'smooth'})">
-            Book Now
+        <button type="button"
+            onclick="document.querySelector('#booking').scrollIntoView({behavior:'smooth'})">
+            Explore &amp; Book Your Trip
         </button>
-
     </section>
 
-    <!-- ================= DESTINATIONS ================= -->
-
+    <!-- DESTINATIONS -->
     <section id="destinations" class="destinations">
-
-        <h2>Popular Destinations</h2>
+        <h2>Explore Our Popular Destinations</h2>
 
         <div class="cards">
-
-            <!-- Maldives -->
-
-            <div class="card">
-
-                <img src="images/maldives.jpg" alt="Maldives">
+            <article class="card">
+                <img src="images/maldives.jpg" alt="Turquoise ocean and tropical island in the Maldives" loading="lazy">
 
                 <h3>Maldives</h3>
-
-                <p>⭐⭐⭐⭐⭐</p>
-
-                <p>4.9 Rating</p>
-
+                <p>⭐⭐⭐⭐⭐ &nbsp; 4.9 Rating</p>
+                <p>Crystal-clear waters, luxury island escapes and unforgettable sunsets.</p>
                 <p class="price">₹25,000</p>
 
-                <button onclick="bookTrip('Maldives')">
-                    Book Now
+                <button type="button" onclick="bookTrip('Maldives')">
+                    Book This Trip
                 </button>
+            </article>
 
-            </div>
-
-            <!-- Goa -->
-
-            <div class="card">
-
-                <img src="images/goa.jpg" alt="Goa">
+            <article class="card">
+                <img src="images/goa.jpg" alt="Beautiful beach destination in Goa" loading="lazy">
 
                 <h3>Goa</h3>
-
-                <p>⭐⭐⭐⭐⭐</p>
-
-                <p>4.8 Rating</p>
-
+                <p>⭐⭐⭐⭐⭐ &nbsp; 4.8 Rating</p>
+                <p>Golden beaches, vibrant culture and perfect coastal getaways.</p>
                 <p class="price">₹8,000</p>
 
-                <button onclick="bookTrip('Goa')">
-                    Book Now
+                <button type="button" onclick="bookTrip('Goa')">
+                    Book This Trip
                 </button>
+            </article>
 
-            </div>
-
-            <!-- Manali -->
-
-            <div class="card">
-
-                <img src="images/manali.jpg" alt="Manali">
+            <article class="card">
+                <img src="images/manali.jpg" alt="Mountain landscape in Manali" loading="lazy">
 
                 <h3>Manali</h3>
-
-                <p>⭐⭐⭐⭐⭐</p>
-
-                <p>4.9 Rating</p>
-
+                <p>⭐⭐⭐⭐⭐ &nbsp; 4.9 Rating</p>
+                <p>Snowy peaks, mountain air and adventures worth remembering.</p>
                 <p class="price">₹12,000</p>
 
-                <button onclick="bookTrip('Manali')">
-                    Book Now
+                <button type="button" onclick="bookTrip('Manali')">
+                    Book This Trip
                 </button>
-
-            </div>
-
+            </article>
         </div>
-
     </section>
 
-    <!-- ================= WHY CHOOSE US ================= -->
-
+    <!-- WHY CHOOSE US -->
     <section class="why">
-
-        <h2>Why Choose Us?</h2>
+        <h2>Why Travel With Us?</h2>
 
         <div class="features">
+            <article class="feature">
+                <h3>💎 Great Value</h3>
+                <p>Beautiful travel experiences at affordable prices.</p>
+            </article>
 
-            <div class="feature">
+            <article class="feature">
+                <h3>🛡️ Travel With Confidence</h3>
+                <p>Simple booking and support throughout your journey.</p>
+            </article>
 
-                <h3>💰 Best Price</h3>
+            <article class="feature">
+                <h3>🌴 Incredible Destinations</h3>
+                <p>Explore beach escapes and scenic mountain adventures.</p>
+            </article>
 
-                <p>Affordable travel packages.</p>
-
-            </div>
-
-            <div class="feature">
-
-                <h3>🛡 Safe Travel</h3>
-
-                <p>Your safety is our priority.</p>
-
-            </div>
-
-            <div class="feature">
-
-                <h3>☎ 24/7 Support</h3>
-
-                <p>Always available to help you.</p>
-
-            </div>
-
-            <div class="feature">
-
-                <h3>🌍 Trusted</h3>
-
-                <p>5000+ Happy Customers.</p>
-
-            </div>
-
+            <article class="feature">
+                <h3>💬 Personal Assistance</h3>
+                <p>Find the getaway that matches your travel dreams.</p>
+            </article>
         </div>
-
     </section>
 
-    <!-- ================= ABOUT ================= -->
-
+    <!-- ABOUT -->
     <section id="about" class="about">
-
-        <h2>About Us</h2>
+        <h2>Travel Far. Feel More.</h2>
 
         <p>
-            TravelGo is a trusted travel booking company offering holiday packages,
-            hotel bookings, adventure trips, honeymoon tours and family vacations
-            at affordable prices.
+            At TravelGo, we believe every journey should become
+            a beautiful memory. Whether you dream of relaxing
+            by the ocean or exploring the mountains, we're here
+            to help make your adventure happen.
         </p>
 
         <p>
-            Our mission is to make travel easy, safe and enjoyable for everyone.
+            Discover exciting destinations, choose your favourite
+            experience and book your next getaway with ease.
         </p>
-
     </section>
 
-    <!-- ================= BOOKING ================= -->
-
+    <!-- BOOKING -->
     <section id="booking" class="booking">
-
-        <h2>Book Your Trip</h2>
+        <h2>Let's Plan Your Next Escape</h2>
 
         <form id="bookingForm">
-
             <input
                 type="text"
                 id="name"
-                placeholder="Your Name"
+                name="name"
+                placeholder="Your Full Name"
+                aria-label="Your full name"
+                autocomplete="name"
                 required>
 
             <input
                 type="email"
                 id="email"
+                name="email"
                 placeholder="Email Address"
+                aria-label="Email address"
+                autocomplete="email"
                 required>
 
             <input
                 type="tel"
                 id="phone"
+                name="phone"
                 placeholder="Phone Number"
+                aria-label="Phone number"
+                autocomplete="tel"
                 required>
 
-            <select id="destination" required>
-
-                <option value="">Select Destination</option>
-
-                <option>Maldives</option>
-
-                <option>Goa</option>
-
-                <option>Manali</option>
-
+            <select
+                id="destination"
+                name="destination"
+                aria-label="Select destination"
+                required>
+                <option value="">Choose Your Dream Destination</option>
+                <option value="Maldives">Maldives</option>
+                <option value="Goa">Goa</option>
+                <option value="Manali">Manali</option>
             </select>
 
             <input
                 type="date"
                 id="travelDate"
+                name="travelDate"
+                aria-label="Travel date"
                 required>
 
             <button type="submit">
-
-                Confirm Booking
-
+                Confirm My Booking
             </button>
-
         </form>
-
     </section>
 
-    <!-- ================= REVIEWS ================= -->
-
+    <!-- REVIEWS -->
     <section id="reviews" class="reviews">
-
-        <h2>Customer Reviews</h2>
+        <h2>Stories From Happy Travellers</h2>
 
         <div class="review">
-
             <p>⭐⭐⭐⭐⭐</p>
-
-            <p>
-                "Amazing experience! Highly recommended."
-            </p>
-
-            <b>- Rahul</b>
-
+            <p>"Amazing experience! Highly recommended."</p>
+            <b>— Rahul</b>
         </div>
 
         <div class="review">
-
             <p>⭐⭐⭐⭐⭐</p>
-
-            <p>
-                "Very easy booking process."
-            </p>
-
-            <b>- Priya</b>
-
+            <p>"Very easy booking process."</p>
+            <b>— Priya</b>
         </div>
 
         <div class="review">
-
             <p>⭐⭐⭐⭐⭐</p>
-
-            <p>
-                "Excellent customer support and affordable prices."
-            </p>
-
-            <b>- Arun</b>
-
+            <p>"Excellent customer support and affordable prices."</p>
+            <b>— Arun</b>
         </div>
-
     </section>
 
-    <!-- ================= CONTACT ================= -->
-
+    <!-- CONTACT -->
     <section id="contact" class="contact">
-
-        <h2>Contact Us</h2>
-
+        <h2>Your Next Adventure Awaits</h2>
+        <p>Have a question about your trip? Get in touch.</p>
         <p>📧 travelgo@email.com</p>
-
         <p>📞 +91 9876543210</p>
-
         <p>📍 Kochi, Kerala, India</p>
-
     </section>
 
-    <!-- ================= FOOTER ================= -->
-
+    <!-- FOOTER -->
     <footer>
-
         <h3>🌍 TravelGo</h3>
-
-        <p>Making Your Dream Vacation Come True.</p>
-
-        <p>📧 travelgo@email.com</p>
-
-        <p>📞 +91 9876543210</p>
-
+        <p>Explore More. Experience More.</p>
+        <p>Making Every Journey Unforgettable.</p>
         <p>&copy; 2026 TravelGo. All Rights Reserved.</p>
-
     </footer>
 
     <script src="script.js"></script>
-
 </body>
-
 </html>
+
